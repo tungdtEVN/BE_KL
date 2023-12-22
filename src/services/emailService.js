@@ -15,15 +15,15 @@ let sendSimpleEmail = async (dataSend) => {
         let info = await transporter.sendMail({
             from: '"ThanhTung 👻" <dinh.thanh.tung.dev@gmail.com>', // sender address
             to: dataSend.email, // list of receivers
-            subject: "Xác thực email | PTITSHOP", // Subject line
+            subject: "Xác thực email", // Subject line
             html: getBodyHTMLEmailVerify(dataSend)
         });
     }
     if (dataSend.type === 'forgotpassword') {
         let info = await transporter.sendMail({
-            from: '"BiNgo2706 👻" <dotanthanhvlog@gmail.com>', // sender address
+            from: '"ThanhTung 👻" <dinh.thanh.tung.dev@gmail.com>', // sender address
             to: dataSend.email, // list of receivers
-            subject: "Xác nhận quên mật khẩu | PTITSHOP", // Subject line
+            subject: "Xác nhận quên mật khẩu", // Subject line
             html: getBodyHTMLEmailForgotPassword(dataSend)
         });
     }
