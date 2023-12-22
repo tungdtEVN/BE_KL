@@ -13,7 +13,7 @@ let sendSimpleEmail = async (dataSend) => {
     });
     if (dataSend.type === 'verifyEmail') {
         let info = await transporter.sendMail({
-            from: '"BiNgo2706 👻" <dotanthanhvlog@gmail.com>', // sender address
+            from: '"ThanhTung 👻" <dinh.thanh.tung.dev@gmail.com>', // sender address
             to: dataSend.email, // list of receivers
             subject: "Xác thực email | PTITSHOP", // Subject line
             html: getBodyHTMLEmailVerify(dataSend)
